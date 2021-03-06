@@ -1,89 +1,68 @@
-# operasi komparasi
+# operasi logika atau boolean
 
-# setiap hasil dari operasi komparasi adalah boolean
+# not, or, and, xor
 
-# >,<,>=,<=,==,!=,is,is not
+# NOT
+print('====NOT====')
+a = False
+c = not a
+print('data a =',a)
+print('-------------- NOT')
+print('data c =',c)
 
-a = 4
-b = 2
+# OR (jika salah satu true, maka hasilnya adalah true)
+print('====OR====')
+a = False
+b = False
+c = a or b
+print(a,'OR',b,'=',c)
+a = False
+b = True
+c = a or b
+print(a,'OR',b,' =',c)
+a = True
+b = False
+c = a or b
+print(a,' OR',b,'=',c)
+a = True
+b = True
+c = a or b
+print(a,' OR',b,' =',c)
 
-# lebih besar dari >
-print('========== lebih besar dari (>)')
-hasil = a > 3
-print(a,'>',3,'=',hasil)
-hasil = b > 3
-print(b,'>',3,'=',hasil)
-hasil = b > 2
-print(b,'>',2,'=',hasil)
+# AND (jika dua buah nilai true, maka hasil true)
+print('====AND====')
+a = False
+b = False
+c = a and b
+print(a,'AND',b,'=',c)
+a = False
+b = True
+c = a and b
+print(a,'AND',b,' =',c)
+a = True
+b = False
+c = a and b
+print(a,' AND',b,'=',c)
+a = True
+b = True
+c = a and b
+print(a,' AND',b,' =',c)
 
-# kurang dari <
-print('========== kurang dari (<)')
-hasil = a < 3
-print(a,'<',3,'=',hasil)
-hasil = b < 3
-print(b,'<',3,'=',hasil)
-hasil = b < 2
-print(b,'<',2,'=',hasil)
-
-# lebih dari sama dengan >=
-print('========== lebih dari sama dengan(>=)')
-hasil = a >= 3
-print(a,'>=',3,'=',hasil)
-hasil = b >= 3
-print(b,'>=',3,'=',hasil)
-hasil = b >= 2
-print(b,'>=',2,'=',hasil)
-
-# kurang dari sama dengan <=
-print('======== kurang dari sama dengan(<=)')
-hasil = a <= 3
-print(a,'<=',3,'=',hasil)
-hasil = b <= 3
-print(b,'<=',3,'=',hasil)
-hasil = b <= 2
-print(b,'<=',2,'=',hasil)
-
-# sama dengan (==)
-print('======== sama dengan(==)')
-hasil = a == 4
-print(a,'==',4,'=',hasil)
-hasil = b == 4
-print(b,'==',4,'=',hasil)
-
-# tidak sama dengan (!=)
-print('======== sama dengan(!=)')
-hasil = a != 4
-print(a,'!=',4,'=',hasil)
-hasil = b != 4
-print(b,'!=',4,'=',hasil)
-
-# 'is' sebagai komparasi object identity
-print('======== object identity(is)')
-x = 5 # ini adalah assignment membuat object
-y = 5
-print('nilai x =',x,',id = ',hex(id(x)))
-print('nilai y =',y,',id = ',hex(id(y)))
-hasil = x is y
-print('x is y =',hasil)
-
-x = 5 # ini adalah assignment membuat object
-y = 6
-print('nilai x =',x,',id = ',hex(id(x)))
-print('nilai y =',y,',id = ',hex(id(y)))
-hasil = x is y
-print('x is y =',hasil)
-
-print('======== object identity(is not)')
-x = 5 # ini adalah assignment membuat object
-y = 5
-print('nilai x =',x,',id = ',hex(id(x)))
-print('nilai y =',y,',id = ',hex(id(y)))
-hasil = x is not y
-print('x is y =',hasil)
-
-x = 5 # ini adalah assignment membuat object
-y = 6
-print('nilai x =',x,',id = ',hex(id(x)))
-print('nilai y =',y,',id = ',hex(id(y)))
-hasil = x is not y
-print('x is y =',hasil)
+# XOR (akan true jika salah satu true, sisanya false)
+print('====XOR====')
+a = False
+b = False
+c = a ^ b
+print(a,'XOR',b,'=',c)
+a = False
+b = True
+c = a ^ b
+print(a,'XOR',b,' =',c)
+a = True
+b = False
+c = a ^ b
+print(a,' XOR',b,'=',c)
+a = True
+b = True
+c = a ^ b
+print(a,' XOR',b,' =',c)
