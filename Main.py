@@ -1,68 +1,42 @@
-# operasi logika atau boolean
+# episode latihan logika dan komparasi
 
-# not, or, and, xor
+# membuat gabungan area rentang dari angka
 
-# NOT
-print('====NOT====')
-a = False
-c = not a
-print('data a =',a)
-print('-------------- NOT')
-print('data c =',c)
+# ++++++3--------10+++++++
 
-# OR (jika salah satu true, maka hasilnya adalah true)
-print('====OR====')
-a = False
-b = False
-c = a or b
-print(a,'OR',b,'=',c)
-a = False
-b = True
-c = a or b
-print(a,'OR',b,' =',c)
-a = True
-b = False
-c = a or b
-print(a,' OR',b,'=',c)
-a = True
-b = True
-c = a or b
-print(a,' OR',b,' =',c)
+inputUser = float(input("masukan angka yang bernilai\nkurang dari 3 \natau \nlebih besar dari 10\n:"))
 
-# AND (jika dua buah nilai true, maka hasil true)
-print('====AND====')
-a = False
-b = False
-c = a and b
-print(a,'AND',b,'=',c)
-a = False
-b = True
-c = a and b
-print(a,'AND',b,' =',c)
-a = True
-b = False
-c = a and b
-print(a,' AND',b,'=',c)
-a = True
-b = True
-c = a and b
-print(a,' AND',b,' =',c)
+# ++++++3-----------------
+# Memeriksa angka kurang dari 3
+isKurangDari = (inputUser < 3)
+print("Kurang dari 3 =", isKurangDari)
 
-# XOR (akan true jika salah satu true, sisanya false)
-print('====XOR====')
-a = False
-b = False
-c = a ^ b
-print(a,'XOR',b,'=',c)
-a = False
-b = True
-c = a ^ b
-print(a,'XOR',b,' =',c)
-a = True
-b = False
-c = a ^ b
-print(a,' XOR',b,'=',c)
-a = True
-b = True
-c = a ^ b
-print(a,' XOR',b,' =',c)
+# ---------------10++++++++
+# Memeriksa angka lebih dari 10
+isLebihDari = (inputUser > 10)
+print("Lebih dari 10 =", isLebihDari)
+
+# ++++++3--------10+++++++
+
+isCorrect = isKurangDari or isLebihDari
+print("angka yang anda masukan: ", isCorrect)
+
+
+# -----3++++++++10--------
+# kasus irisan
+print("\n",10*"=","\n")
+inputUser = float(input("masukan angka yang bernilai\nlebih dari 3 \ndan \nkurang dari 10\n:"))
+
+# -----3++++++++++++++++++
+# lebih dari 3
+isLebihDari = inputUser > 3
+print("Lebih dari 3 = ",isLebihDari)
+
+# +++++++++++++++10-------
+# kurang dari 10
+isKurangDari = inputUser < 10
+print("Kurang dari 10 = ",isKurangDari)
+
+# -----3++++++++10--------
+isCorrect = isKurangDari and isLebihDari
+print("angka yang anda masukan: ", isCorrect)
