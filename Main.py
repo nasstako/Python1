@@ -1,42 +1,56 @@
-# episode latihan logika dan komparasi
+# episode operator bitwise, operasi biner, binary
 
-# membuat gabungan area rentang dari angka
+a = 9
+b = 5
 
-# ++++++3--------10+++++++
+# bitwise OR (|)
+c = a | b
+print('\n=========OR=========')
+print('nilai :',a,' , binary :',format(a,'08b'))
+print('nilai :',b,' , binary :',format(b,'08b'))
+print('----------------------------- (|)')
+print('nilai :',c,' , binary :',format(c,'08b'))
 
-inputUser = float(input("masukan angka yang bernilai\nkurang dari 3 \natau \nlebih besar dari 10\n:"))
+# bitwise AND (&)
+c = a & b
+print('\n=========AND========')
+print('nilai :',a,' , binary :',format(a,'08b'))
+print('nilai :',b,' , binary :',format(b,'08b'))
+print('----------------------------- (&)')
+print('nilai :',c,' , binary :',format(c,'08b'))
 
-# ++++++3-----------------
-# Memeriksa angka kurang dari 3
-isKurangDari = (inputUser < 3)
-print("Kurang dari 3 =", isKurangDari)
+# bitwise XOR (^)
+c = a ^ b
+print('\n=========XOR========')
+print('nilai :',a,' , binary :',format(a,'08b'))
+print('nilai :',b,' , binary :',format(b,'08b'))
+print('----------------------------- (^)')
+print('nilai :',c,' , binary :',format(c,'08b'))
 
-# ---------------10++++++++
-# Memeriksa angka lebih dari 10
-isLebihDari = (inputUser > 10)
-print("Lebih dari 10 =", isLebihDari)
+# bitwise NOT (~)
+c = ~a
+print('\n=========NOT========')
+print('nilai :',a,' , binary :',format(a,'08b'))
+print('----------------------------- (~)')
+print('nilai :',c,' , binary :',format(c,'08b'))
+print('----------------------------- (^)')
+d = 0b0000001001
+e = 0b1111111111
+print('nilai :',e^d,' , binary :',format(e^d,'08b'))
 
-# ++++++3--------10+++++++
+# shifting
 
-isCorrect = isKurangDari or isLebihDari
-print("angka yang anda masukan: ", isCorrect)
+# shift right (>>)
+c = a >> 2
+print('\n=========>>=========')
+print('nilai :',a,' , binary :',format(a,'08b'))
+print('----------------------------- (>>)')
+print('nilai :',c,' , binary :',format(c,'08b'))
 
+# shift left (<<)
+c = a << 2
+print('\n=========<<=========')
+print('nilai :',a,' , binary :',format(a,'08b'))
+print('----------------------------- (<<)')
+print('nilai :',c,' , binary :',format(c,'08b'))
 
-# -----3++++++++10--------
-# kasus irisan
-print("\n",10*"=","\n")
-inputUser = float(input("masukan angka yang bernilai\nlebih dari 3 \ndan \nkurang dari 10\n:"))
-
-# -----3++++++++++++++++++
-# lebih dari 3
-isLebihDari = inputUser > 3
-print("Lebih dari 3 = ",isLebihDari)
-
-# +++++++++++++++10-------
-# kurang dari 10
-isKurangDari = inputUser < 10
-print("Kurang dari 10 = ",isKurangDari)
-
-# -----3++++++++10--------
-isCorrect = isKurangDari and isLebihDari
-print("angka yang anda masukan: ", isCorrect)
