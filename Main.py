@@ -1,17 +1,52 @@
-# Episode input user
+# operasi aritmatika
 
-# data yang dimasukan pasti string
-data = input("Masukan data: ")
+a = 10
+b = 3
 
-print("data = ",data,",type =",type(data))
+# operasi tambah +
+hasil = a + b
+print(a,'+',b,'=',hasil)
 
-# jika kita ingin mengambil int, maka
-angka = float(input("masukan angka: "))
-angka = int(input("masukan angka: "))
+# operasi pengurangan -
+hasil = a - b
+print(a,'-',b,'=',hasil)
 
-print("data = ",angka,",type =",type(angka))
+# operasi perkalian *
+hasil = a * b
+print(a,'*',b,'=',hasil)
 
-bagaimana dengan boolean
-biner = bool(int(input("masukan nilai boolean: ")))
+# operasi pembagian /
+hasil = a / b
+print(a,'/',b,'=',hasil)
 
-print("data = ",biner,",type =",type(biner))
+# operasi eksponen (pangkat) **
+hasil = a ** b
+print(a,'**',b,'=',hasil)
+
+# operasi modulus %
+hasil = a % b
+print(a,'%',b,'=',hasil)
+
+# operasi floor division //
+hasil = a // b
+print(a,'//',b,'=',hasil)
+
+# prioritas operasi, operational precedence
+'''
+    1. ()
+    2. exponen **
+    3. perkalian dan teman-teman * / ** % //
+    4. pertambahan dan pengurangan + -
+'''
+x = 3
+y = 2
+z = 4
+
+hasil = x ** y * (z + x) / y - y % z // x
+print(x,'**',y,'*',z,'+',x,'/',y,'-',y,'%',z,'//',x,'=',hasil)
+
+hasil = x + y * z
+print(x,'+',y,'*',z,'=',hasil)
+# kurung akan mengambil langkah paling pertama
+hasil = (x + y) * z 
+print('(',x,'+',y,') *',z,'=',hasil)
