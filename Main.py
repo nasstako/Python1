@@ -1,75 +1,61 @@
-# operasi yang dapat dilakukan dengan penyingkatan
-# operasi ditambah dengan assignment
+data = "ini adalah string"
+print(data)
+print(type(data))
 
-a = 5 # adalah assignment
-print("nilai a =",a)
+# 1. cara membuat string
 
-a += 1 # artinya adalah a = a + 1
-print("nilai a += 1, nilai a menjadi",a)
+'''
+    1. dengan menggunakan single quote '...'
+    2. dengan menggunakan double quote "..."
+'''
 
-a -= 2 # artinya adalah a = a - 2
-print("nilai a -= 2, nilai a menjadi",a)
+data = 'Menggunakan single quote'
+print(data)
 
-a *= 5 # artinya adalah a = a * 5
-print("nilai a *= 5, nilai a menjadi",a)
+data = "Menggunakan double quote"
+print(data)
 
-a /= 2 # artinya adalah a = a / 2
-print("nilai a /= 2, nilai a menjadi",a)
+print('"Halo, apa kabar?"')
+print("'Halo, apa kabar?'")
+print("ini adalah hari jum'at")
 
-b = 10
-print("\nnilai b =",b)
+# 2. Menggunakan tanda \
 
-# modulus dan floor division
-b %= 3
-print("nilai b %= 3, nilai b menjadi",b)
+# membuat tanda ' menjadi string
+print('mari shalat jum\'at')
+print('g\'day, isn\'t it?')
 
-b = 10
-print("\nnilai b =",b)
+# backlash
+print("C:\\user\\Ucup")
 
-b //= 3
-print("nilai b //= 3, nilai b menjadi",b)
+# tab
+print("ucup\t\t\totong, semakin jauhan")
 
-# pangkat atau eksponen
-a = 5
-print("\nnilai a =",a)
-a **= 3
-print("nilai a **= 3, nilai a menjadi",a)
+# backspace
+print("ucup \botong, jadi deketan")
 
-# operasi bitwise
-# OR
-c = True
-print("\nnilai c =",c)
-c |= False
-print("nilai c |= False, nilai c menjadi",c)
-c = False
-print("nilai c =",c)
-c |= False
-print("nilai c |= False, nilai c menjadi",c)
+# newline
+print("baris pertama.\nbaris kedua.") # LF -> line feed -> unix, macos, linux
+print("baris pertama.\rbaris kedua.") # CR -> carriage return -> commodore, acorn, lisp 
+print("baris pertama.\r\nbaris kedua.") # CRLF -> line feed carriage return -> dipakai oleh windows
 
-# AND
-c = True
-print("\nnilai c =",c)
-c &= False
-print("nilai c &= False, nilai c menjadi",c)
-c = True
-print("nilai c =",c)
-c &= True
-print("nilai c &= True, nilai c menjadi",c)
+# 3. String literal atau raw
 
-# XOR
-c = True
-print("\nnilai c =",c)
-c ^= False
-print("nilai c ^= False, nilai c menjadi",c)
-c = True
-print("nilai c =",c)
-c ^= True
-print("nilai c ^= True, nilai c menjadi",c)
+# hati-hati
+print('C:\new folder') # akan salah pathnya
 
-# geser geser
-d = 0b0100
-print("\nnilai d =",format(d,'04b'))
-d >>= 2
-print("nilai d >>= 2, nilai d menjadi",format(d,'04b'))
-d <<= 1
-print("nilai d <<= 1, nilai d menjadi",format(d,'04b'))
+# menggunakan raw string
+print(r'C:\new folder')
+
+# multiline literal string
+print("""
+Nama : Ucup
+Kelas : 3 SD   
+""")
+
+# multiline literal string dan RAW
+print(r"""
+Nama : Ucup
+Kelas : 3 SD\new normal 
+Website : www.ucup.com/newID
+""")
